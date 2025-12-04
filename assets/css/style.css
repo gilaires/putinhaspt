@@ -1,0 +1,185 @@
+/* ------------------------------------------------------------- */
+/* GLOBAL */
+/* ------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* As páginas de modelo usarão overflow:hidden via JS, 
+   o index usa scroll normal. */
+html, body {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------- */
+/* INDEX: GALLERY FEED */
+/* ------------------------------------------------------------- */
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin: 25px 0 10px 0;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* SEMPRE 3 COLUNAS */
+  gap: 12px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-size: 18px;
+}
+
+/* ------------------------------------------------------------- */
+/* SLIDER PAGE */
+/* ------------------------------------------------------------- */
+
+#sliderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: black;
+}
+
+/* Horizontal photo/video = fullscreen cover */
+.slider-horizontal {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover !important;
+}
+
+/* Vertical photo/video = fit height, auto width, centered */
+.slider-vertical {
+  height: 100vh !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+video.slider-vertical {
+  max-height: 100vh !important;
+  max-width: 100vw !important;
+}
+
+/* ------------------------------------------------------------- */
+/* SLIDER ANIMATIONS */
+/* ------------------------------------------------------------- */
+
+.fade {
+  animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-next {
+  animation: slideNext .45s ease forwards;
+}
+
+.slide-prev {
+  animation: slidePrev .45s ease forwards;
+}
+
+@keyframes slideNext {
+  0%   { transform: translateX(100%); opacity: 0.3; }
+  100% { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slidePrev {
+  0%   { transform: translateX(-100%); opacity: 0.3; }
+  100% { transform: translateX(0);      opacity: 1; }
+}
+
+/* ------------------------------------------------------------- */
+/* ARROWS */
+/* ------------------------------------------------------------- */
+
+.arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: white;
+  opacity: 0.25;
+  padding: 20px;
+  cursor: pointer;
+  transition: opacity .2s;
+  z-index: 20;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* ------------------------------------------------------------- */
+/* AUTOPLAY BUTTON */
+/* ------------------------------------------------------------- */
+
+.autoplay-btn {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  font-size: 42px;
+  opacity: 0.25;
+  cursor: pointer;
+  z-index: 30;
+  transition: opacity .2s;
+  user-select: none;
+  font-weight: bold;
+}
+
+.autoplay-btn:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------- */
+/* UI ELEMENTS - TO PREVENT DOUBLE TAP */
+/* ------------------------------------------------------------- */
+
+.ui-element {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}

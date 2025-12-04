@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Julia – Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div id="sliderContainer"></div>
+
+  <div class="arrow left ui-element" onclick="prev()">‹</div>
+  <div class="arrow right ui-element" onclick="next()">›</div>
+
+  <div id="autoplayBtn" class="autoplay-btn ui-element" onclick="toggleAutoplay()">⇒̶</div>
+
+  <script src="assets/js/slider.js"></script>
+  <script>
+    const modelPhotos = [
+      { type: "image", src: "photos/julia/1.jpeg" },
+      { type: "image", src: "photos/julia/2.jpeg" },
+      { type: "image", src: "photos/julia/3.jpeg" },
+      { type: "image", src: "photos/julia/4.jpeg" },
+      { type: "image", src: "photos/julia/5.jpeg" },
+      { type: "image", src: "photos/julia/6.jpeg" },
+      { type: "image", src: "photos/julia/7.jpeg" },
+      { type: "image", src: "photos/julia/8.jpeg" },
+      { type: "image", src: "photos/julia/9.jpeg" },
+      { type: "image", src: "photos/julia/10.jpeg" },
+      { type: "image", src: "photos/julia/11.jpeg" },
+      { type: "image", src: "photos/julia/12.jpeg" },
+      { type: "image", src: "photos/julia/13.jpeg" },
+      { type: "image", src: "photos/julia/14.jpeg" },
+      { type: "image", src: "photos/julia/15.jpeg" },
+      { type: "image", src: "photos/julia/16.jpeg" },
+      { type: "image", src: "photos/julia/17.jpeg" },
+      { type: "image", src: "photos/julia/18.jpeg" },
+      { type: "image", src: "photos/julia/19.jpeg" },
+      { type: "image", src: "photos/julia/20.jpeg" },
+      { type: "image", src: "photos/julia/21.jpeg" },
+    ];
+    initSlider(modelPhotos);
+  </script>
+
+</body>
+</html>

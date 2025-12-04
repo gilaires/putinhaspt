@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Jusara – Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div id="sliderContainer"></div>
+
+  <div class="arrow left ui-element" onclick="prev()">‹</div>
+  <div class="arrow right ui-element" onclick="next()">›</div>
+
+  <div id="autoplayBtn" class="autoplay-btn ui-element" onclick="toggleAutoplay()">⇒̶</div>
+
+  <script src="assets/js/slider.js"></script>
+  <script>
+    const modelPhotos = [
+      { type: "image", src: "photos/jusara/1.jpg" },
+      { type: "image", src: "photos/jusara/2.jpg" },
+      { type: "image", src: "photos/jusara/3.jpg" },
+      { type: "image", src: "photos/jusara/4.jpg" },
+      { type: "image", src: "photos/jusara/5.jpg" },
+      { type: "image", src: "photos/jusara/6.jpg" },
+      { type: "image", src: "photos/jusara/7.jpg" },
+      { type: "video", src: "photos/jusara/video1.mp4" },
+        
+    ];
+
+    initSlider(modelPhotos);
+  </script>
+
+</body>
+</html>
+

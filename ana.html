@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Ana – Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div id="sliderContainer"></div>
+
+  <div class="arrow left ui-element" onclick="prev()">‹</div>
+  <div class="arrow right ui-element" onclick="next()">›</div>
+
+  <div id="autoplayBtn" class="autoplay-btn ui-element" onclick="toggleAutoplay()">⇒̶</div>
+
+  <script src="assets/js/slider.js"></script>
+  <script>
+     const modelPhotos = [
+      { type: "video", src: "photos/ana/CC BJ curto.mp4" },
+      { type: "video", src: "photos/ana/video1.mp4" },
+      { type: "image", src: "photos/ana/1.png" },
+      { type: "image", src: "photos/ana/2.png" },
+      { type: "image", src: "photos/ana/3.png" },
+      { type: "image", src: "photos/ana/4.png" },
+      { type: "image", src: "photos/ana/5.png" },
+      { type: "image", src: "photos/ana/6.png" },
+      { type: "image", src: "photos/ana/7.png" },
+      { type: "image", src: "photos/ana/8.png" }, 
+      { type: "image", src: "photos/ana/9.png" },
+      { type: "image", src: "photos/ana/10.png" },
+      { type: "image", src: "photos/ana/11.png" },
+      { type: "video", src: "photos/ana/CC BJ longo.mp4" }
+    ];
+    initSlider(modelPhotos);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Nina – Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div id="sliderContainer"></div>
+
+  <div class="arrow left ui-element" onclick="prev()">‹</div>
+  <div class="arrow right ui-element" onclick="next()">›</div>
+
+  <div id="autoplayBtn" class="autoplay-btn ui-element" onclick="toggleAutoplay()">⇒̶</div>
+
+  <script src="assets/js/slider.js"></script>
+  
+  <script>
+     const modelPhotos = [
+      { type: "video", src: "photos/nina/CC BJ curto.mp4" },
+      { type: "video", src: "photos/nina/video1.mp4" },
+      { type: "image", src: "photos/nina/1.png" },
+      { type: "image", src: "photos/nina/2.png" },
+      { type: "image", src: "photos/nina/3.png" },
+      { type: "image", src: "photos/nina/4.png" },
+      { type: "image", src: "photos/nina/5.png" },
+      { type: "image", src: "photos/nina/6.png" },
+      { type: "image", src: "photos/nina/7.png" },
+      { type: "image", src: "photos/nina/8.png" }, 
+      { type: "image", src: "photos/nina/9.png" },
+      { type: "image", src: "photos/nina/10.png" },
+      { type: "image", src: "photos/nina/11.png" },
+      { type: "video", src: "photos/nina/CC BJ longo.mp4" }
+    ];
+    initSlider(modelPhotos);
+  </script>
+
+</body>
+</html>
